@@ -1,0 +1,33 @@
+<%@ include file="taglibs.jsp"%>
+ <form:form method="post" action="/admin/title/add" commandName="title" class="form-vertical">
+
+       <form:label path="titleName">Title Name</form:label>
+       <form:input path="titleName" />
+       <form:label path="HighestQualification">Highest Qualification</form:label>
+       <form:input path="highestQualification" />
+       <input type="submit" value="Add Title" class="btn"/>
+   </form:form>
+
+
+   <c:if  test="${!empty titles}">
+       <h3>List of Available Titles</h3>
+       <table class="table table-bordered table-striped"   >
+           <thead>
+           <tr >
+               <th width="120">Name</th>
+               <th width="120">Highest Qualification</th>
+               <th align="center" width="20">&nbsp;</th>
+           </tr>
+           </thead>
+           <tbody>
+           <c:forEach items="${titles}" var="title">
+               <tr>
+                   <td>${title.titleName}</td>
+                   <td>${title.highestQualification}</td>
+                   <td align="center"><form action="title/delete/${title.titleId}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+               </tr>
+           </c:forEach>
+           </tbody>
+       </table>
+   </c:if>
+       

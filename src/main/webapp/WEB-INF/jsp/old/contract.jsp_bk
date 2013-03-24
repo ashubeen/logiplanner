@@ -1,0 +1,49 @@
+<%@ include file="taglibs.jsp"%>
+<form:form method="post" action="/admin/contract/add" commandName="contract" class="form-vertical">
+
+<form:label path="contractName">Name</form:label>
+    <form:input path="contractName" />
+    <form:label path="vesselId">Vessel</form:label>
+    <form:select items="${vessels}" path="vesselId" />
+    <form:label path="startDate">Start Date</form:label>
+    <form:input path="startDate" />
+    <form:label path="endDate">End Date</form:label>
+    <form:input path="endDate" />
+    <form:label path="country">Country</form:label>
+    <form:input path="country" />
+    <form:label path="comments">Comments</form:label>
+    <form:input path="comments" />
+    <input type="submit" value="Add Contract" class="btn"/>
+</form:form>
+
+
+<c:if  test="${!empty contractList}">
+    <h3>Contract</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Vessel</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Country</th>
+            <th>Comments</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${contractList}" var="contract">
+            <tr>
+                <td>${contract.contractName}</td>
+                <td>${contract.vesselId}</td>
+                <td>${contract.startDate}</td>
+                <td>${contract.endDate}</td>
+                <td>${contract.country}</td>
+                <td>${contract.comments}</td>
+                <td><form action="contract/delete/${contract.contractId}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</c:if>
+     

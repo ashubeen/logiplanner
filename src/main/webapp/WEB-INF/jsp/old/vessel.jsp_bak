@@ -1,0 +1,86 @@
+<%@ include file="taglibs.jsp"%>
+
+<form:form method="post" action="vessel/add" commandName="vessel" class="form-vertical">
+<table></table>
+	<form:label path="imoNum">IMO Number</form:label>
+	<form:input path="imoNum" />
+	<form:label path="vesselName">Name</form:label>
+	<form:input path="vesselName" />
+	<form:label path="ownerCompany">Owner Company</form:label>
+	<form:select items="${companies}" path="ownerCompany" />
+    <form:label path="type">Type</form:label>
+    <form:input path="type" />
+    <form:label path="baseLocation">Base Location</form:label>
+    <form:input path="baseLocation" />
+    <form:label path="specs">Specs</form:label>
+    <form:input path="specs" />
+    <form:label path="classification">Classification</form:label>
+    <form:input path="classification" />
+    <form:label path="certifier">Certifier</form:label>
+    <form:input path="certifier" />
+    <form:label path="comments">Comments</form:label>
+    <form:input path="comments" />
+    <form:label path="quarters">Quarters</form:label>
+    <form:input path="quarters" />
+    <form:label path="grossTonnage">Gross Tonnage</form:label>
+    <form:input path="grossTonnage" />
+    <form:label path="uom">Unit of Measure</form:label>
+    <form:input path="uom" />
+    <form:label path="length">Length</form:label>
+    <form:input path="length" />
+    <form:label path="beam">Beam</form:label>
+    <form:input path="beam" />
+    <form:label path="draft">Draft</form:label>
+    <form:input path="draft" />
+    <form:label path="maxWaterDepth">Max Water Depth</form:label>
+    <form:input path="maxWaterDepth" />
+    <form:label path="maxDrillingDepth">Max Drilling Depth</form:label>
+    <form:input path="maxDrillingDepth" />
+    <form:label path="vesselFlag">Flag</form:label>
+    <form:input path="vesselFlag" />
+    <form:label path="drillingHp">Drilling HP</form:label>
+    <form:input path="drillingHp" />
+    <form:label path="yearBuilt">Year Built</form:label>
+    <form:input path="yearBuilt" />
+    <form:label path="companyBuilt">Company Built</form:label>
+    <form:input path="companyBuilt" />
+    <form:label path="otherNames">Other Names</form:label>
+    <form:input path="otherNames" />
+    <input type="submit" value="Add Vessel" class="btn"/>
+</form:form>
+
+
+<c:if  test="${!empty vesselList}">
+<h3>Vessel</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>IMO Number</th>
+        <th>Name</th>
+        <th>Owner Company</th>
+        <th>Type</th>
+        <th>Base Location</th>
+        <th>Classification</th>
+        <th>Certifier</th>
+        <th>Year Built</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${vesselList}" var="vessel">
+      <tr>
+          <td>${vessel.imoNum}</td>
+          <td>${vessel.vesselName}</td>
+          <td>${vessel.ownerCompany}</td>
+          <td>${vessel.type}</td>
+          <td>${vessel.baseLocation}</td>
+          <td>${vessel.classification}</td>
+          <td>${vessel.certifier}</td>
+          <td>${vessel.yearBuilt}</td>
+          <td><form action="vessel/delete/${vessel.vesselId}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</c:if>
+
