@@ -65,10 +65,10 @@ jQuery(document).ready(function ($) {
 <div id="page">
 
     <div id="header" class="clearfix">
-        <h1 style="cursor: pointer;display: compact;" onclick="location.href='${ctx}/'">Logistics</h1>
+        <h1 style="cursor: pointer;display: compact;" onclick="location.href='${ctx}/'">Logi<i>planner</i></h1>
 
         <div id="branding">
-            <a href="http://localhost:8080" title="Testing">
+            <a href="${ctx}" title="logiplanner">
                 <img src="${ctx}/resources/images/boat-icon.gif" width="100" height="80" alt="Testing" align="right"/></a>
         </div>
 
