@@ -66,11 +66,11 @@ jQuery(document).ready(function ($) {
    <div id="wrapper">
         <div id="headerwrap">
         <div id="header">
-            <p>This is the Header</p>
+            <p><font style="color: red;size: 10px;">l</font><font style="color: white;size: 6px;">OGIC<i>Planner</i></font></p>
         </div>
         </div>
         <div id="navigationwrap">
-        <div id="navigation">
+        <div id="navigation" align="left">
           	<ul id="css3menu1" class="topmenu">
 				<li class="topfirst"><a href="#" style="height:14px;line-height:14px;">Home</a></li>
 				<li class="topmenu"><a href="#" style="height:14px;line-height:14px;"><span>Schedule</span></a>
@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
         </div>
         
         
-               </div>
+        </div>
         <div id="contentliquid"><div id="contentwrap">
         <div id="content">
                    <%@ include file="/messages.jsp"%>
