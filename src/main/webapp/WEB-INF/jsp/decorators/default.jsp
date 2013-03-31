@@ -63,10 +63,6 @@ jQuery(document).ready(function ($) {
 </head>
 <body onload="openOffersDialog();">
 <div id="ajaxLoading" style="display: none; position: absolute; top: 0; right: 0; background: red; padding: 5px 10px; color: white">Loading...</div>
-<a name="top"></a>
-<div id="page">
-
-
    <div id="wrapper">
         <div id="headerwrap">
         <div id="header">
@@ -111,8 +107,6 @@ jQuery(document).ready(function ($) {
         </div>
         </div>
     </div>
- 
 
-</div>
 </body>
 </html>
