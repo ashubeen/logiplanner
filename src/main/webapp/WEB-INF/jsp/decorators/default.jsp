@@ -59,11 +59,10 @@ jQuery(document).ready(function ($) {
 
     <decorator:head/>
 </head>
-<body onload="openOffersDialog();">
+<body onload="openOffersDialog();" style="background-image: '${ctx}/resources/images/oil.jpg'">
 <div id="ajaxLoading" style="display: none; position: absolute; top: 0; right: 0; background: red; padding: 5px 10px; color: white">Loading...</div>
 <a name="top"></a>
 <div id="page">
-
     <div id="header" class="clearfix">
         <h1 style="cursor: pointer;display: compact;" onclick="location.href='${ctx}/'">Logi<i>planner</i></h1>
 
