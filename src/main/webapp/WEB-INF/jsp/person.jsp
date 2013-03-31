@@ -64,10 +64,10 @@
         $('#PersonTable').jtable({
             title: 'Persons',
             actions: {
-                listAction: '/logistics/admin/person/listPersons',
-                createAction: '/logistics/admin/person/addPerson',
-                updateAction: '/logistics/admin/person/updatePerson',
-                deleteAction: '/logistics/admin/person/deletePerson'
+                listAction: '/admin/person/listPersons',
+                createAction: '/admin/person/addPerson',
+                updateAction: '/admin/person/updatePerson',
+                deleteAction: '/admin/person/deletePerson'
             },
             fields: {
                 id: {
@@ -106,7 +106,7 @@
                 companyId: {
                     title: 'Company',
                     width: '15%',
-                    options: '/logistics/admin/company/getCompanyOptions' 
+                    options: '/admin/company/getCompanyOptions' 
                 }
             }
         });

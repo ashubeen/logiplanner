@@ -64,10 +64,10 @@
         $('#ActivityTable').jtable({
             title: 'Activities',
             actions: {
-                listAction: '/logistics/admin/activity/listactivities',
-                createAction: '/logistics/admin/activity/addactivity',
-                updateAction: '/logistics/admin/activity/updateactivity',
-                deleteAction: '/logistics/admin/activity/deleteactivity'
+                listAction: '/admin/activity/listactivities',
+                createAction: '/admin/activity/addactivity',
+                updateAction: '/admin/activity/updateactivity',
+                deleteAction: '/admin/activity/deleteactivity'
             },
             fields: {
                 id: {
@@ -88,7 +88,7 @@
                 parentId: {
                     title: 'Parent Activity',
                     width: '15%',
-                    options: '/logistics/admin/activity/getParentActivityOptions' 
+                    options: '/admin/activity/getParentActivityOptions' 
                 } 
             }
         });

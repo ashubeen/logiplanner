@@ -64,10 +64,10 @@
         $('#VesselTable').jtable({
             title: 'Vessels',
             actions: {
-                listAction: '/logistics/admin/vessel/listVessels',
-                createAction: '/logistics/admin/vessel/addVessel',
-                updateAction: '/logistics/admin/vessel/updateVessel',
-                deleteAction: '/logistics/admin/vessel/deleteVessel'
+                listAction: '/admin/vessel/listVessels',
+                createAction: '/admin/vessel/addVessel',
+                updateAction: '/admin/vessel/updateVessel',
+                deleteAction: '/admin/vessel/deleteVessel'
             },
             fields: {
                 id: {
@@ -87,7 +87,7 @@
                 ownerCompany: {
                     title: 'Owner Company',
                     width: '15%',
-                    options: '/logistics/admin/company/getCompanyOptions' 
+                    options: '/admin/company/getCompanyOptions' 
                 },
                 type: {
                     title: 'Type',

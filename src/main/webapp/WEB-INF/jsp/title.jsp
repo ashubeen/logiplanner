@@ -64,10 +64,10 @@
         $('#TitleTable').jtable({
             title: 'Titles',
             actions: {
-                listAction: '/logistics/admin/title/listtitles',
-                createAction: '/logistics/admin/title/addtitle',
-                updateAction: '/logistics/admin/title/updateTitle',
-                deleteAction: '/logistics/admin/title/deleteTitle'
+                listAction: '/admin/title/listtitles',
+                createAction: '/admin/title/addtitle',
+                updateAction: '/admin/title/updateTitle',
+                deleteAction: '/admin/title/deleteTitle'
             },
             fields: {
                 id: {

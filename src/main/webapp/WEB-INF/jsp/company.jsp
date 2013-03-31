@@ -64,10 +64,10 @@
         $('#CompanyTable').jtable({
             title: 'Companies',
             actions: {
-                listAction: '/logistics/admin/company/listCompanies',
-                createAction: '/logistics/admin/company/addCompany',
-                updateAction: '/logistics/admin/company/updateCompany',
-                deleteAction: '/logistics/admin/company/deleteCompany'
+                listAction: '/admin/company/listCompanies',
+                createAction: '/admin/company/addCompany',
+                updateAction: '/admin/company/updateCompany',
+                deleteAction: '/admin/company/deleteCompany'
             },
             fields: {
                 id: {
@@ -85,7 +85,7 @@
                     create: false, 
                     display: function (companyData) { 
                         //Create an image that will be used to open child table 
-                        var $img = $('<img src="/logistics/resources/img/add.png" title="Edit phone numbers" />'); 
+                        var $img = $('<img src="/resources/img/add.png" title="Edit phone numbers" />'); 
                         //Open child table when user clicks the image 
                         $img.click(function () { 
                             $('#CompanyTable').jtable('openChildTable', 
@@ -93,10 +93,10 @@
                                     { 
                                         title: companyData.record.companyName + ' - Company Address', 
                                         actions: { 
-                                            listAction: '/logistics/admin/companyAddress/listAddress?id=' + companyData.record.id, 
-                                            deleteAction: '/logistics/admin/companyAddress/deleteAddress', 
-                                            updateAction: '/logistics/admin/companyAddress/updateAddress', 
-                                            createAction: '/logistics/admin/companyAddress/addAddress?id=' + companyData.record.id
+                                            listAction: '/admin/companyAddress/listAddress?id=' + companyData.record.id, 
+                                            deleteAction: '/admin/companyAddress/deleteAddress', 
+                                            updateAction: '/admin/companyAddress/updateAddress', 
+                                            createAction: '/admin/companyAddress/addAddress?id=' + companyData.record.id
                                         }, 
                                         fields: {                                        
                                             id: { 

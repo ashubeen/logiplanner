@@ -64,10 +64,10 @@
         $('#ContractTable').jtable({
             title: 'Contracts',
             actions: {
-                listAction: '/logistics/admin/contract/listContracts',
-                createAction: '/logistics/admin/contract/addContract',
-                updateAction: '/logistics/admin/contract/updateContract',
-                deleteAction: '/logistics/admin/contract/deleteContract'
+                listAction: '/admin/contract/listContracts',
+                createAction: '/admin/contract/addContract',
+                updateAction: '/admin/contract/updateContract',
+                deleteAction: '/admin/contract/deleteContract'
             },
             fields: {
                 id: {
@@ -83,7 +83,7 @@
                 vesselId: {
                     title: 'Vessel',
                     width: '15%',
-                    options: '/logistics/admin/vessel/getVesselOptions' 
+                    options: '/admin/vessel/getVesselOptions' 
                 },
                 startDate: {
                     title: 'Start Date',
