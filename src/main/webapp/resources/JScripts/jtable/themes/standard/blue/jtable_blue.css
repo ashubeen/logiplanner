@@ -19,7 +19,8 @@ div.jtable-main-container
 /* A div that contains title of the table (if any title supplied in options) */
 div.jtable-title
 {
-    background:url('title-bg.png') left;
+    /*background:url('title-bg.png') left;*/
+    background-color: #333;
     color: #FFFFFF;
     border-color: #C6D5E1;
 }

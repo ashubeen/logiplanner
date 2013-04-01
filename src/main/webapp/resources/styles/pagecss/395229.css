@@ -65,7 +65,7 @@ p {
 }
 
 #footerwrap {
-    width: 100%;
+    width: auto;
     float: left;
     margin: 0 auto;
     clear: both;
