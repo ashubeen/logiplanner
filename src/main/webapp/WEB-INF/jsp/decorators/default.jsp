@@ -65,8 +65,8 @@ jQuery(document).ready(function ($) {
 <div id="ajaxLoading" style="display: none; position: absolute; top: 0; right: 0; background: red; padding: 5px 10px; color: white">Loading...</div>
    <div id="wrapper">
         <div id="headerwrap">
-        <div id="header">
-            <p><font style="color: red;size: 10px;">l</font><font style="color: white;size: 6px;">OGIC<i>Planner</i></font></p>
+        <div id="mainheader">
+            &nbsp;<font style="color: red;size: 20px;">l</font><font style="color: white;size: 10px;">OGI<i>planner</i></font>
         </div>
         </div>
         <div id="navigationwrap">
@@ -102,7 +102,7 @@ jQuery(document).ready(function ($) {
         </div>
         </div></div>
         <div id="footerwrap">
-        <div id="footer">
+        <div id="mainfooter">
             <p>@CopyRights</p>
         </div>
         </div>
