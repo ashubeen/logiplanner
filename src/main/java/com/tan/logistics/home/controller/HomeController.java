@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/logi")
+@RequestMapping("/home")
 public class HomeController 
 {
 	
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "/homepage", method = RequestMethod.GET)
     public String goHome() {
     
 
