@@ -29,12 +29,12 @@ public class ScheduleService
     }
         
   
-    public void add(Person person) {
-        em.persist(person);
+    public void add(Schedule schedule) {
+        em.persist(schedule);
     }
 
 
-    public List<Person> getAll() {
+    public List<Schedule> getAll() {
         CriteriaQuery<Schedule> s = em.getCriteriaBuilder().createQuery(Schedule.class);
         Root<Schedule> from =s.from(Schedule.class);
         s.orderBy(em.getCriteriaBuilder().asc(from.get("scheduleName")));
@@ -42,35 +42,29 @@ public class ScheduleService
     }
 
     public void delete(Integer id) {
-        Person person = em.find(Person.class, id);
-        if (null != person) {
-            em.remove(person);
+        Schedule schedule = em.find(Schedule.class, id);
+        if (null != schedule) {
+            em.remove(schedule);
         }
     }
     
 	/**
-	 * Edits an existing person
+	 * Edits an existing schedule
 	 */
-	public void edit(Person person) {
+	public void edit(Schedule schedule) {
 
 		// Retrieve existing person via id
-		Person existingPerson = this.get(person.getId());
-		existingPerson.setCountryOfResidence(person.getCountryOfResidence());
-		existingPerson.setDob(person.getDob());
-		existingPerson.setFirstName(person.getFirstName());
-		existingPerson.setLastName(person.getLastName());
-		existingPerson.setMiddleName(person.getMiddleName());
-		existingPerson.setNationality(person.getNationality());
-		existingPerson.setCompanyId(person.getCompanyId());
+		Schedule existingSchedule = this.get(schedule.getId());
+	
 			
 		// Save updates
-		em.merge(existingPerson);
+		em.merge(existingSchedule);
 	}
 
-	  public Person get(Integer id)
+	  public Schedule get(Integer id)
 	    {
 	    	
-	    	Person person = (Person) em.createQuery("from Person p where p.id =:id").setParameter("id", id).getSingleResult();
-	    	return person;
+		  Schedule schedule = (Schedule) em.createQuery("from Schedule s where s.id =:id").setParameter("id", id).getSingleResult();
+	    	return schedule;
 	    }
 }
