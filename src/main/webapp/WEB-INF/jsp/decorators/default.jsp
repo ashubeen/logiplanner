@@ -66,7 +66,7 @@ jQuery(document).ready(function ($) {
    <div id="wrapper">
         <div id="headerwrap">
         <div id="mainheader">
-            <div align="right">&nbsp;<font style="color: red;size: 40px;">l</font><font style="color: white;size: 30px;">OGI<i>planner</i></font></div>
+            <div align="right">&nbsp;<font style="color: red;font-size: 40px;">l</font><font style="color: white;font-size: 30px; font-style: italic;">OGI<i>planner</i></font></div>
         </div>
         </div>
         <div id="navigationwrap">
