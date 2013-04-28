@@ -49,23 +49,25 @@
             min-width: 200px;
         }
     </style>
-
+   
+   
+   
 </head>
 <body>
-<div id="PersonTable" style="width: 580px; margin: auto;"></div>
+<div id="ProjectTable" style="width: 580px; margin: auto;"></div>
 
 <script type="text/javascript">
 
     $(document).ready(function () {
 
         //Prepare jtable plugin
-        $('#PersonTable').jtable({
-            title: 'Persons',
+        $('#ProjectTable').jtable({
+            title: 'Projects',
             actions: {
-                listAction:'/admin/person/listPersons',
-                createAction: '/admin/person/addPerson',
-                updateAction: '/admin/person/updatePerson',
-                deleteAction: '/admin/person/deletePerson'
+                listAction: '/logiplanner/scheduler/project/listProjects',
+                createAction: '/logiplanner/scheduler/project/addProject',
+                updateAction: '/logiplanner/admin/contract/updateContract',
+                deleteAction: '/logiplanner/admin/contract/deleteContract'
             },
             fields: {
                 id: {
@@ -74,43 +76,38 @@
                     edit: false,
                     list: false
                 },
-                firstName: {	
-                    title: 'First Name',
+                projectName: {
+                    title: 'Project Name',
                     width: '15%'
                 },
-                middleName: {
-                    title: 'Middle Name',
-                    width: '15%'
+                contractId: {
+                    title: 'Contract',
+                    width: '15%',
+                    options: '/logiplanner/scheduler/project/getContractOptions' 
                 },
-                lastName: {
-                    title: 'Last Name',
-                    width: '20%'                    
+                startDate: {
+                    title: 'Start Date',
+                    width: '20%',
+                    type: 'date',
+                    displayFormat: 'yy-mm-dd'
+                    
                 },
-                dob: {
-                    title: 'Date of Birth',
+                endDate: {
+                    title: 'End Date',
                     width: '15%',
                     type: 'date',
                     displayFormat: 'yy-mm-dd'
                  
                 },
-                nationality: {
-                    title: 'Nationality',
+                status: {
+                    title: 'Status',
                     width: '15%'
-                },
-                countryOfResidence: {
-                    title: 'Country of Residence',
-                    width: '15%'
-                },
-                companyId: {
-                    title: 'Company',
-                    width: '15%',
-                    options: '/admin/company/getCompanyOptions' 
-                }
+                }              
             }
         });
 
-        //Load person list from server
-        $('#PersonTable').jtable('load');
+        //Load Project list from server
+        $('#ProjectTable').jtable('load');
     });
 
 </script>

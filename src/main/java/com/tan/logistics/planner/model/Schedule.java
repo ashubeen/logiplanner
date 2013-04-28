@@ -1,7 +1,5 @@
 package com.tan.logistics.planner.model;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,26 +11,66 @@ import javax.persistence.Table;
 public class Schedule 
 {
 
-	
 	   @Id
 	    @GeneratedValue   
-	    @Column(name="schedule_id") 
+	    @Column(name="schedule_Id") 
 	    private Integer Id;
 	    
-	    @Column(name="vessel_id")
-	    private Integer vesselId;
+	   
+	    @Column(name="gantt_id") 
+	    private String ganttId;
 	    
-	    @Column(name="schedule_name")
-	    private String scheduleName;
-	       
-	    @Column(name="start_date")
-	    private Date startDate;
 	    
-	    @Column(name="end_date")
-	    private Date endDate;
+	    @Column(name="contract_id")
+	    private Integer contractId;
+	    
+	    @Column(name="name")
+	    private String name;
+	    
+	    @Column(name="code")
+	    private String code;
+	    
+	    @Column(name="level")
+	    private Integer level;
+	    
 	    
 	    @Column(name="status")
-	    private Integer status;
+	    private String status;
+	    
+	    
+	    @Column(name="start")
+	    private Integer start;
+	    
+	    
+	    @Column(name="duration")
+	    private Integer duration;
+	    
+	    @Column(name="end")
+	    private Integer end;
+	    
+	    
+	    @Column(name="startIsMilestone")
+	    private boolean startIsMilestone;
+	    
+	    @Column(name="startIsMilestone")
+	    private boolean endIsMilestone;
+	    
+	    @Column(name="depends")
+	    private boolean depends;
+	    
+	    @Column(name="parent_id")
+	    private Integer parentId;
+	    
+	    @Column(name="sequence_num")
+	    private Integer sequenceNum;
+
+		public String getGanttId() {
+			return ganttId;
+		}
+
+		public void setGanttId(String ganttId) {
+			this.ganttId = ganttId;
+		}
 
 		public Integer getId() {
 			return Id;
@@ -42,48 +80,112 @@ public class Schedule
 			Id = id;
 		}
 
-		public Integer getVesselId() {
-			return vesselId;
+		public Integer getContractId() {
+			return contractId;
 		}
 
-		public void setVesselId(Integer vesselId) {
-			this.vesselId = vesselId;
+		public void setContractId(Integer contractId) {
+			this.contractId = contractId;
 		}
 
-		public String getScheduleName() {
-			return scheduleName;
+		public String getName() {
+			return name;
 		}
 
-		public void setScheduleName(String scheduleName) {
-			this.scheduleName = scheduleName;
+		public void setName(String name) {
+			this.name = name;
 		}
 
-		public Date getStartDate() {
-			return startDate;
+		public String getCode() {
+			return code;
 		}
 
-		public void setStartDate(Date startDate) {
-			this.startDate = startDate;
+		public void setCode(String code) {
+			this.code = code;
 		}
 
-		public Date getEndDate() {
-			return endDate;
+		public Integer getLevel() {
+			return level;
 		}
 
-		public void setEndDate(Date endDate) {
-			this.endDate = endDate;
+		public void setLevel(Integer level) {
+			this.level = level;
 		}
 
-		public Integer getStatus() {
+		public String getStatus() {
 			return status;
 		}
 
-		public void setStatus(Integer status) {
+		public void setStatus(String status) {
 			this.status = status;
+		}
+
+		public Integer getStart() {
+			return start;
+		}
+
+		public void setStart(Integer start) {
+			this.start = start;
+		}
+
+		public Integer getDuration() {
+			return duration;
+		}
+
+		public void setDuration(Integer duration) {
+			this.duration = duration;
+		}
+
+		public Integer getEnd() {
+			return end;
+		}
+
+		public void setEnd(Integer end) {
+			this.end = end;
+		}
+
+		public boolean isStartIsMilestone() {
+			return startIsMilestone;
+		}
+
+		public void setStartIsMilestone(boolean startIsMilestone) {
+			this.startIsMilestone = startIsMilestone;
+		}
+
+		public boolean isEndIsMilestone() {
+			return endIsMilestone;
+		}
+
+		public void setEndIsMilestone(boolean endIsMilestone) {
+			this.endIsMilestone = endIsMilestone;
+		}
+
+		public boolean isDepends() {
+			return depends;
+		}
+
+		public void setDepends(boolean depends) {
+			this.depends = depends;
+		}
+
+		public Integer getParentId() {
+			return parentId;
+		}
+
+		public void setParentId(Integer parentId) {
+			this.parentId = parentId;
+		}
+
+		public Integer getSequenceNum() {
+			return sequenceNum;
+		}
+
+		public void setSequenceNum(Integer sequenceNum) {
+			this.sequenceNum = sequenceNum;
 		}
 	    
 	    
 	    
 	    
-	    
+	
 }
