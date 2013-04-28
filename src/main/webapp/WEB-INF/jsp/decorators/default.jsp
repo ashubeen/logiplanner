@@ -35,6 +35,7 @@
 	
 	<script type="text/javascript">
 	    var jq = jQuery.noConflict();
+
 	</script>
 	
 	<script type="text/javascript">

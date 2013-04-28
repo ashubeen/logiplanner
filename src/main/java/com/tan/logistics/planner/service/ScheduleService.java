@@ -20,7 +20,6 @@ public class ScheduleService
 {
 
 	
-	
 	private EntityManager em;
 	
     @PersistenceContext
@@ -55,8 +54,14 @@ public class ScheduleService
 
 		// Retrieve existing person via id
 		Schedule existingSchedule = this.get(schedule.getId());
-	
-			
+		//existingSchedule.setEndDate(schedule.getEndDate());
+		existingSchedule.setId(schedule.getId());
+		existingSchedule.setScheduleName(schedule.getScheduleName());
+		//existingSchedule.setStartDate(schedule.getStartDate());
+		existingSchedule.setStatus(schedule.getStatus());
+		existingSchedule.setVesselId(schedule.getVesselId());
+		
+		
 		// Save updates
 		em.merge(existingSchedule);
 	}

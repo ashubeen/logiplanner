@@ -49,25 +49,22 @@
             min-width: 200px;
         }
     </style>
-   
-   
-   
+
 </head>
 <body>
 <div id="PersonTable" style="width: 580px; margin: auto;"></div>
 
 <script type="text/javascript">
-
+var ctxaaa='<c:url value="/"/>';
     $(document).ready(function () {
-
         //Prepare jtable plugin
         $('#PersonTable').jtable({
             title: 'Persons',
             actions: {
-                listAction: '/admin/person/listPersons',
-                createAction: '/admin/person/addPerson',
-                updateAction: '/admin/person/updatePerson',
-                deleteAction: '/admin/person/deletePerson'
+                listAction: ctxaaa+'/admin/person/listPersons',
+                createAction: ctxaaa+'/admin/person/addPerson',
+                updateAction: ctxaaa+'/admin/person/updatePerson',
+                deleteAction: ctxaaa+'/admin/person/deletePerson'
             },
             fields: {
                 id: {
@@ -106,7 +103,7 @@
                 companyId: {
                     title: 'Company',
                     width: '15%',
-                    options: '/admin/company/getCompanyOptions' 
+                    options: ctxaaa+'/admin/company/getCompanyOptions' 
                 }
             }
         });
