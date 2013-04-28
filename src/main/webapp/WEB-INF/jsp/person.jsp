@@ -55,16 +55,17 @@
 <div id="PersonTable" style="width: 580px; margin: auto;"></div>
 
 <script type="text/javascript">
-var ctxaaa='<c:url value="/"/>';
+
     $(document).ready(function () {
+
         //Prepare jtable plugin
         $('#PersonTable').jtable({
             title: 'Persons',
             actions: {
-                listAction: ctxaaa+'/admin/person/listPersons',
-                createAction: ctxaaa+'/admin/person/addPerson',
-                updateAction: ctxaaa+'/admin/person/updatePerson',
-                deleteAction: ctxaaa+'/admin/person/deletePerson'
+                listAction:'/admin/person/listPersons',
+                createAction: '${ctx}/admin/person/addPerson',
+                updateAction: '${ctx}/admin/person/updatePerson',
+                deleteAction: '${ctx}/admin/person/deletePerson'
             },
             fields: {
                 id: {
@@ -103,7 +104,7 @@ var ctxaaa='<c:url value="/"/>';
                 companyId: {
                     title: 'Company',
                     width: '15%',
-                    options: ctxaaa+'/admin/company/getCompanyOptions' 
+                    options: '/admin/company/getCompanyOptions' 
                 }
             }
         });
