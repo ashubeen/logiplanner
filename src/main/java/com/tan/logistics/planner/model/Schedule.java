@@ -52,7 +52,7 @@ public class Schedule
 	    @Column(name="startIsMilestone")
 	    private boolean startIsMilestone;
 	    
-	    @Column(name="startIsMilestone")
+	    @Column(name="endIsMilestone")
 	    private boolean endIsMilestone;
 	    
 	    @Column(name="depends")
@@ -64,20 +64,20 @@ public class Schedule
 	    @Column(name="sequence_num")
 	    private Integer sequenceNum;
 
-		public String getGanttId() {
-			return ganttId;
-		}
-
-		public void setGanttId(String ganttId) {
-			this.ganttId = ganttId;
-		}
-
 		public Integer getId() {
 			return Id;
 		}
 
 		public void setId(Integer id) {
 			Id = id;
+		}
+
+		public String getGanttId() {
+			return ganttId;
+		}
+
+		public void setGanttId(String ganttId) {
+			this.ganttId = ganttId;
 		}
 
 		public Integer getContractId() {
@@ -183,6 +183,8 @@ public class Schedule
 		public void setSequenceNum(Integer sequenceNum) {
 			this.sequenceNum = sequenceNum;
 		}
+
+
 	    
 	    
 	    
