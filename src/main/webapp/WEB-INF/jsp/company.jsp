@@ -85,7 +85,7 @@
                     create: false, 
                     display: function (companyData) { 
                         //Create an image that will be used to open child table 
-                        var $img = $('<img src="/resources/img/add.png" title="Edit phone numbers" />'); 
+                        var $img = $('<img src="/resources/img/add.png" title="Add Company Address" />'); 
                         //Open child table when user clicks the image 
                         $img.click(function () { 
                             $('#CompanyTable').jtable('openChildTable', 
@@ -110,6 +110,10 @@
                                                 width: '30%', 
                                                 options: { 'Mailing': 'Mailing', 'Head Qu': 'Head Qu', 'Office': 'Office' } 
                                             }, 
+                                            address: { 
+                                                title: 'Address', 
+                                                width: '30%',                                                 
+                                            },
                                             city: { 
                                                 title: 'City', 
                                                 width: '30%'

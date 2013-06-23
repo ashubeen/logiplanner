@@ -1,5 +1,6 @@
 package com.tan.logistics.admin.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.tan.logistics.admin.model.Company;
 import com.tan.logistics.admin.model.Title;
 import com.tan.logistics.admin.request.TitleRequest;
 import com.tan.logistics.admin.response.LogisticsResponse;
+import com.tan.logistics.admin.response.Option;
 import com.tan.logistics.admin.service.TitleService;
 
 
@@ -72,7 +75,25 @@ public class TitleController {
 
 	}
     
-    
+    @RequestMapping(value="/getTitleOptions", method= RequestMethod.POST )
+	public @ResponseBody LogisticsResponse<List<Option>>  getCompanyOptions()
+	{
+		List<Title> titleList = titleService.getAll();
+		List<Option> titleOptions = new ArrayList<Option>();
+		LogisticsResponse<List<Option>> response = new LogisticsResponse<List<Option>>();
+     	
+     	for (Title title : titleList) 
+     	{
+     		Option option = new Option(title.getId() != null ? title.getId().toString(): "", title.getTitleName());
+     		titleOptions.add(option);
+     		
+ 		}
+     	response.setOptions(titleOptions);	
+     	
+       	response.setResult("OK");
+				
+		return response;
+	} 
     /*
      * 
     @RequestMapping("/titlelist")

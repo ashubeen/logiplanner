@@ -11,7 +11,7 @@
       <script type="text/javascript" src='<c:url value="/resources/js/jtable/jquery.jtable.min.js"/>'></script>
    <script src='<c:url value="/resources/js/jquery/js/jquery-1.8.0.min.js"/>' type="text/javascript"></script>
    <script src='<c:url value="/resources/js/jquery/js/jquery-ui-1.8.23.custom.min.js"/>' type="text/javascript"></script>
-    --%>
+    --%>"src/main/webapp/WEB-INF/jsp/location.jsp"
    
    
     <link href='<c:url value="/resources/Content/Site.css"/>' rel="stylesheet" type="text/css" />
@@ -49,23 +49,27 @@
             min-width: 200px;
         }
     </style>
-
+   
+   
+   
 </head>
 <body>
-<div id="PersonTable" style="width: 580px; margin: auto;"></div>
+
+
+<div id="LocationTable" style="width: 580px; margin: auto;"></div>
 
 <script type="text/javascript">
 
     $(document).ready(function () {
 
         //Prepare jtable plugin
-        $('#PersonTable').jtable({
-            title: 'Persons',
+        $('#LocationTable').jtable({
+            title: 'Locations',
             actions: {
-                listAction:'/admin/person/listPersons',
-                createAction: '/admin/person/addPerson',
-                updateAction: '/admin/person/updatePerson',
-                deleteAction: '/admin/person/deletePerson'
+                listAction: '/admin/location/locations',
+                createAction: '/admin/location/addLocation',
+                updateAction: '/admin/location/updateLocation',
+                deleteAction: '/admin/location/deleteLocation'
             },
             fields: {
                 id: {
@@ -75,26 +79,26 @@
                     list: false
                 },
                 //CHILD TABLE DEFINITION FOR "PHONE NUMBERS" 
-                Address: { 
+                Coordinates: { 
                     title: '', 
                     width: '1%', 
                     sorting: false, 
                     edit: false, 
                     create: false, 
-                    display: function (companyData) { 
+                    display: function (locationData) { 
                         //Create an image that will be used to open child table 
-                        var $img = $('<img src="/resources/img/add.png" title="Add Address" />'); 
+                        var $img = $('<img src="/resources/img/add.png" title="Edit phone numbers" />'); 
                         //Open child table when user clicks the image 
                         $img.click(function () { 
-                            $('#Address').jtable('openChildTable', 
+                            $('#LocationTable').jtable('openChildTable', 
                                     $img.closest('tr'), 
                                     { 
-                                        title: companyData.record.companyName + ' - Person Address', 
+                                        title: locationData.record.locationName + ' - Location Coordinates', 
                                         actions: { 
-                                            listAction: '/admin/personAddress/listAddress?id=' + person.record.id, 
-                                            deleteAction: '/admin/personAddress/deleteAddress', 
-                                            updateAction: '/admin/personAddress/updateAddress', 
-                                            createAction: '/admin/personAddress/addAddress?id=' + person.record.id
+                                            listAction: '/admin/locationCoordinates/listCoordinates?id=' + locationData.record.id, 
+                                            deleteAction: '/admin/locationCoordinates/deleteCoordinates', 
+                                            updateAction: '/admin/locationCoordinates/updateCoordinates', 
+                                            createAction: '/admin/locationCoordinates/addCoordinates?id=' + locationData.record.id
                                         }, 
                                         fields: {                                        
                                             id: { 
@@ -103,47 +107,31 @@
                                                 edit: false, 
                                                 list: false
                                             }, 
-                                            addressType: { 
-                                                title: 'Address Type', 
-                                                width: '30%',
-                                                options: { 'Mailing': 'Mailing', 'Office': 'Office' }
-                                            }, 
-                                            address1: { 
-                                                title: 'Address Line 1', 
-                                                width: '30%'                                                
-                                            }, 
-                                            address2: { 
-                                                title: 'Address Line 2', 
-                                                width: '30%'                                                
-                                            }, 
-                                            city: { 
-                                                title: 'City', 
+                                            locLongitute: { 
+                                                title: 'Longitude', 
+                                                width: '30%'
+                                                                                           }, 
+                                            locLatitude: { 
+                                                title: 'Latitude', 
                                                 width: '30%'
                                             }, 
-                                            state: { 
-                                                title: 'State', 
+                                            locDecimalX: { 
+                                                title: 'DecimalX', 
                                                 width: '20%', 
                                                 //type: 'date', 
                                                 //displayFormat: 'yy-mm-dd', 
                                                 //create: false, 
                                                 //edit: false
                                             },
-                                            country: { 
-                                                title: 'Country', 
-                                                width: '20%', 
-                                                //type: 'date', 
-                                                //displayFormat: 'yy-mm-dd', 
-                                                //create: false, 
-                                                //edit: false
-                                            },
-                                            zipCode: { 
-                                                title: 'Zip Code', 
+                                            locDecimalY: { 
+                                                title: 'DecimalY', 
                                                 width: '20%', 
                                                 //type: 'date', 
                                                 //displayFormat: 'yy-mm-dd', 
                                                 //create: false, 
                                                 //edit: false
                                             }
+                                          
                                         } 
                                     }, function (data) { //opened handler 
                                         data.childTable.jtable('load'); 
@@ -153,48 +141,25 @@
                         return $img; 
                     } 
                 }, 
-                titleId: {
-                    title: 'Title',
+                locName: {
+                    title: 'Location Name',
+                    width: '15%'
+                },
+                locType: {
+                    title: 'Location Type',
                     width: '15%',
-                    options: '/admin/title/getTitleOptions' 
+                    options: { 'Port': 'Port', 'Harbor': 'Harbor', 'Land': 'Land' }
                 },
-                firstName: {	
-                    title: 'First Name',
+                locCountry: {
+                    title: 'Location Country',
                     width: '15%'
-                },
-                middleName: {
-                    title: 'Middle Name',
-                    width: '15%'
-                },
-                lastName: {
-                    title: 'Last Name',
-                    width: '20%'                    
-                },
-                dob: {
-                    title: 'Date of Birth',
-                    width: '15%',
-                    type: 'date',
-                    displayFormat: 'yy-mm-dd'
-                 
-                },
-                nationality: {
-                    title: 'Nationality',
-                    width: '15%'
-                },
-                countryOfResidence: {
-                    title: 'Country of Residence',
-                    width: '15%'
-                },
-                companyId: {
-                    title: 'Company',
-                    width: '15%',
-                    options: '/admin/company/getCompanyOptions'
                 }
+                
             }
         });
 
         //Load person list from server
-        $('#PersonTable').jtable('load');
+        $('#LocationTable').jtable('load');
     });
 
 </script>

@@ -78,7 +78,7 @@
                 },
                 imoNum: {
                     title: 'IMO Number',
-                    width: '15%'
+                    width: '10%'
                 },
                 vesselName: {
                     title: 'Name',
@@ -91,10 +91,14 @@
                 },
                 type: {
                     title: 'Type',
-                    width: '15%'
+                    width: '10%'
                 },
                 baseLocation: {
                     title: 'Base Location',
+                    width: '15%'
+                },
+                specs: {
+                    title: 'Specifications',
                     width: '15%'
                 },
                 classification: {
@@ -105,8 +109,60 @@
                     title: 'Certifier',
                     width: '15%'
                 },
+                comments: {
+                    title: 'Comments',
+                    width: '15%'
+                },
+                quarters: {
+                    title: 'Quarters',
+                    width: '15%'
+                },
+                grossTonnage: {
+                    title: 'Gross Tonnage',
+                    width: '15%'
+                },
+                uom: {
+                    title: 'UOM',
+                    width: '15%'
+                },
+                length: {
+                    title: 'length',
+                    width: '15%'
+                },
+                beam: {
+                    title: 'beam',
+                    width: '15%'
+                },
+                draft: {
+                    title: 'Draft',
+                    width: '15%'
+                },
+                maxWaterDepth: {
+                    title: 'Max Water Depth',
+                    width: '15%'
+                },
+                maxDrillingDepth: {
+                    title: 'Max Drilling Depth',
+                    width: '15%'
+                },
+                vesselFlag: {
+                    title: 'Vessel Flag',
+                    width: '15%'
+                },
+                drillingHp: {
+                    title: 'Drilling HP',
+                    width: '15%'
+                },
                 yearBuilt: {
                     title: 'Year Built',
+                    width: '2%'
+                },
+                companyBuilt: {
+                    title: 'Company Built',
+                    width: '2%'
+                },
+                otherNames: {
+                    title: 'Other Names',
                     width: '2%'
                 }
             }

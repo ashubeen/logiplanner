@@ -57,6 +57,7 @@ public class PersonService {
 		existingPerson.setMiddleName(person.getMiddleName());
 		existingPerson.setNationality(person.getNationality());
 		existingPerson.setCompanyId(person.getCompanyId());
+		existingPerson.setTitleId(person.getTitleId());
 			
 		// Save updates
 		em.merge(existingPerson);

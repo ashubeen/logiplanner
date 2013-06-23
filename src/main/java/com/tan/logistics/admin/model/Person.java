@@ -20,7 +20,10 @@ public class Person {
     @Column(name="company_id")
     private Integer companyId;
     
-    @Column(name="first_name")
+    @Column(name="title_id")
+    private Integer titleId;
+
+	@Column(name="first_name")
     private String firstName;
     
     @Column(name="middle_name")
@@ -103,4 +106,11 @@ public class Person {
 	}
 
     
+    public Integer getTitleId() {
+		return titleId;
+	}
+
+	public void setTitleId(Integer titleId) {
+		this.titleId = titleId;
+	}
 }
