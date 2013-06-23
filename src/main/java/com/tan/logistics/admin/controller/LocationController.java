@@ -39,7 +39,7 @@ public class LocationController {
 	}
 	
 	@RequestMapping(value="/locations", method= RequestMethod.POST )
-	public @ResponseBody LogisticsResponse<Location>  getAllCompanies()
+	public @ResponseBody LogisticsResponse<Location>  getAllLocations()
 	{
 		List<Location> locations = locationService.getAll();		
 		LogisticsResponse<Location> response = new LogisticsResponse<Location>();		

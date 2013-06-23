@@ -11,7 +11,7 @@
       <script type="text/javascript" src='<c:url value="/resources/js/jtable/jquery.jtable.min.js"/>'></script>
    <script src='<c:url value="/resources/js/jquery/js/jquery-1.8.0.min.js"/>' type="text/javascript"></script>
    <script src='<c:url value="/resources/js/jquery/js/jquery-ui-1.8.23.custom.min.js"/>' type="text/javascript"></script>
-    --%>"src/main/webapp/WEB-INF/jsp/location.jsp"
+    --%>
    
    
     <link href='<c:url value="/resources/Content/Site.css"/>' rel="stylesheet" type="text/css" />

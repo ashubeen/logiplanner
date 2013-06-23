@@ -81,15 +81,15 @@
                     sorting: false, 
                     edit: false, 
                     create: false, 
-                    display: function (companyData) { 
+                    display: function (personData) { 
                         //Create an image that will be used to open child table 
                         var $img = $('<img src="/resources/img/add.png" title="Add Address" />'); 
                         //Open child table when user clicks the image 
                         $img.click(function () { 
-                            $('#Address').jtable('openChildTable', 
+                            $('#PersonTable').jtable('openChildTable', 
                                     $img.closest('tr'), 
                                     { 
-                                        title: companyData.record.companyName + ' - Person Address', 
+                                        title: personData.record.personName + ' - Person Address', 
                                         actions: { 
                                             listAction: '/admin/personAddress/listAddress?id=' + person.record.id, 
                                             deleteAction: '/admin/personAddress/deleteAddress', 
