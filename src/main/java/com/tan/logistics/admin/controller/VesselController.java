@@ -41,11 +41,10 @@ public class VesselController {
 	    @RequestMapping(value="/listVessels", method= RequestMethod.POST )
 	    public @ResponseBody LogisticsResponse<Vessel>  listVessels()
 	    {
-	    	List<Vessel> titles = vesselService.getAll();    	
+	    	List<Vessel> vessels = vesselService.getAll();    	
 	    	LogisticsResponse<Vessel>  response = new LogisticsResponse<Vessel>();    	
 	    	response.setResult("OK");
-	    	response.setRecords(titles);   
-	    	System.out.println("listing");
+	    	response.setRecords(vessels);   
 	    	return response;
 	    }
 	  
@@ -198,7 +197,7 @@ public class VesselController {
     /**
      * Edits an existing record
      */
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+   /* @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public String postEdit(@RequestParam("id") Integer vesselId, 
     						    @ModelAttribute("vesselAttribute") Vessel vessel) {
 	
@@ -210,7 +209,7 @@ public class VesselController {
 		return "redirect:/admin/vessel/vessellist";
 	}
     
-    
+    */
     
 
 }
