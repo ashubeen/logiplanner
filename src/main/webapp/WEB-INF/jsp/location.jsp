@@ -66,7 +66,7 @@
         $('#LocationTable').jtable({
             title: 'Locations',
             actions: {
-                listAction: '/admin/location/locations',
+                listAction: '/admin/location/listLocations',
                 createAction: '/admin/location/addLocation',
                 updateAction: '/admin/location/updateLocation',
                 deleteAction: '/admin/location/deleteLocation'
