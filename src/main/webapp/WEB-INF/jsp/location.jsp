@@ -93,7 +93,7 @@
                             $('#LocationTable').jtable('openChildTable', 
                                     $img.closest('tr'), 
                                     { 
-                                        title: locationData.record.locationName + ' - Location Coordinates', 
+                                        title: locationData.record.locName + ' - Location Coordinates', 
                                         actions: { 
                                             listAction: '/admin/locationCoordinates/listCoordinates?id=' + locationData.record.id, 
                                             deleteAction: '/admin/locationCoordinates/deleteCoordinates', 
@@ -110,14 +110,14 @@
                                             locLongitute: { 
                                                 title: 'Longitude', 
                                                 width: '30%'
-                                                                                           }, 
+                                            }, 
                                             locLatitude: { 
                                                 title: 'Latitude', 
                                                 width: '30%'
                                             }, 
                                             locDecimalX: { 
                                                 title: 'DecimalX', 
-                                                width: '20%', 
+                                                width: '20%' 
                                                 //type: 'date', 
                                                 //displayFormat: 'yy-mm-dd', 
                                                 //create: false, 
@@ -125,7 +125,7 @@
                                             },
                                             locDecimalY: { 
                                                 title: 'DecimalY', 
-                                                width: '20%', 
+                                                width: '20%' 
                                                 //type: 'date', 
                                                 //displayFormat: 'yy-mm-dd', 
                                                 //create: false, 
