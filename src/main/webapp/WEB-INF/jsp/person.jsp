@@ -91,10 +91,10 @@
                                     { 
                                         title: personData.record.personName + ' - Person Address', 
                                         actions: { 
-                                            listAction: '/admin/personAddress/listAddress?id=' + person.record.id, 
+                                            listAction: '/admin/personAddress/listAddress?id=' + personData.record.id, 
                                             deleteAction: '/admin/personAddress/deleteAddress', 
                                             updateAction: '/admin/personAddress/updateAddress', 
-                                            createAction: '/admin/personAddress/addAddress?id=' + person.record.id
+                                            createAction: '/admin/personAddress/addAddress?id=' + personData.record.id
                                         }, 
                                         fields: {                                        
                                             id: { 

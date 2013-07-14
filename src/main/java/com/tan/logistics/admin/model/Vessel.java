@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 @Entity()
 @Table(name = "vessel")
-
 public class Vessel {
 
 	@Id

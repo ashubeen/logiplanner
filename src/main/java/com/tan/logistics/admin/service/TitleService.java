@@ -23,8 +23,7 @@ public class TitleService {
     public void setEntityManager(EntityManager entityManager) {
         this.em = entityManager;
     }
-        
-    
+            
     public void add(Title title) {
         em.persist(title);
     }

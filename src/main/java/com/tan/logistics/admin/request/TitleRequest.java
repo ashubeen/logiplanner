@@ -4,15 +4,11 @@ import com.tan.logistics.admin.model.Title;
 
 public class TitleRequest 
 {
-
-	
 	
 	private Title record;
 	
 	private Integer id;
 	
-	
-
 	public Title getRecord() {
 		return record;
 	}

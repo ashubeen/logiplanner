@@ -18,7 +18,7 @@ import com.tan.logistics.admin.model.Vessel;
 @Transactional
 public class VesselService {
 
-private EntityManager em;
+	private EntityManager em;
 	
     @PersistenceContext
     public void setEntityManager(EntityManager entityManager) {
@@ -26,8 +26,7 @@ private EntityManager em;
     }
 
 	public void add(Vessel vessel) {
-		em.persist(vessel);
-		
+		em.persist(vessel);		
 	}
 
 	public List<Vessel> getAll() {
