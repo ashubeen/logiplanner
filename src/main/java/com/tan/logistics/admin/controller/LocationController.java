@@ -32,13 +32,13 @@ public class LocationController {
 	private LocationCoordinatesService locCoordinatesService;
 	
 		
-	@RequestMapping("/admin/location")
+	@RequestMapping("/locations")
 	public String alltitles(Model model) {
 	
 	    return "location";
 	}
 	
-	@RequestMapping(value="/locations", method= RequestMethod.POST )
+	@RequestMapping(value="/listLocations", method= RequestMethod.POST )
 	public @ResponseBody LogisticsResponse<Location>  getAllLocations()
 	{
 		List<Location> locations = locationService.getAll();		

@@ -39,7 +39,7 @@ public class PersonAddress
 	private String zipCode;
 	
 	@ManyToOne
-	private Person company;
+	private Person person;
 
 	public Integer getId() {
 		return id;
@@ -106,11 +106,11 @@ public class PersonAddress
 	}
 
 	public Person getPerson() {
-		return company;
+		return person;
 	}
 
-	public void setPerson(Person company) {
-		this.company = company;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 	
 	

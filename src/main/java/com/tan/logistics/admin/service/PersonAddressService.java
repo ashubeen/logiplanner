@@ -52,7 +52,7 @@ public class PersonAddressService {
     public PersonAddress get(Integer id)
     {
     	
-    	PersonAddress personAddress = (PersonAddress)entityManager.createQuery("FROM PersonAddress ca WHERE ca.id=:id").setParameter("id", id).getSingleResult();
+    	PersonAddress personAddress = (PersonAddress)entityManager.createQuery("FROM PersonAddress pa WHERE pa.id=:id").setParameter("id", id).getSingleResult();
     	return personAddress;
     }
     
@@ -81,7 +81,7 @@ public class PersonAddressService {
     
     public void deleteAll(Integer personId)
     {
-    	Query query = entityManager.createQuery("DELETE FROM PersonAddress WHERE person.id="+personId);
+    	Query query = entityManager.createQuery("DELETE FROM PersonAddress WHERE Person.id="+personId);
     	query.executeUpdate();
     	
     }
