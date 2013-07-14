@@ -89,7 +89,7 @@
                             $('#PersonTable').jtable('openChildTable', 
                                     $img.closest('tr'), 
                                     { 
-                                        title: personData.record.personName + ' - Person Address', 
+                                        title: personData.record.firstName + ' '+ personData.record.lastName +' - Person Address', 
                                         actions: { 
                                             listAction: '/admin/personAddress/listAddress?id=' + personData.record.id, 
                                             deleteAction: '/admin/personAddress/deleteAddress', 

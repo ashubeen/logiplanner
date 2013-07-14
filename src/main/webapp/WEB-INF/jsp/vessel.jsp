@@ -77,94 +77,72 @@
                     list: false
                 },
                 imoNum: {
-                    title: 'IMO Number',
-                    width: '10%'
+                    title: 'IMO Number'
                 },
                 vesselName: {
-                    title: 'Name',
-                    width: '15%'
+                    title: 'Name'
                 },
                 ownerCompany: {
                     title: 'Owner Company',
-                    width: '15%',
                     options: '/admin/company/getCompanyOptions' 
                 },
                 type: {
-                    title: 'Type',
-                    width: '10%'
+                    title: 'Type'
                 },
                 baseLocation: {
-                    title: 'Base Location',
-                    width: '15%'
+                    title: 'Base Location'
                 },
                 specs: {
-                    title: 'Specifications',
-                    width: '15%'
+                    title: 'Specifications'
                 },
                 classification: {
-                    title: 'Classification',
-                    width: '15%'
+                    title: 'Classification'
                 },
                 certifier: {
-                    title: 'Certifier',
-                    width: '15%'
-                },
+                    title: 'Certifier'
+                }/*,
                 comments: {
-                    title: 'Comments',
-                    width: '15%'
+                    title: 'Comments'
                 },
                 quarters: {
-                    title: 'Quarters',
-                    width: '15%'
+                    title: 'Quarters'
                 },
                 grossTonnage: {
-                    title: 'Gross Tonnage',
-                    width: '15%'
+                    title: 'Gross Tonnage'
                 },
                 uom: {
-                    title: 'UOM',
-                    width: '15%'
+                    title: 'UOM'
                 },
                 length: {
-                    title: 'length',
-                    width: '15%'
+                    title: 'length'
                 },
                 beam: {
-                    title: 'beam',
-                    width: '15%'
+                    title: 'beam'
                 },
                 draft: {
-                    title: 'Draft',
-                    width: '15%'
+                    title: 'Draft'
                 },
                 maxWaterDepth: {
-                    title: 'Max Water Depth',
-                    width: '15%'
+                    title: 'Max Water Depth'
                 },
                 maxDrillingDepth: {
-                    title: 'Max Drilling Depth',
-                    width: '15%'
+                    title: 'Max Drilling Depth'
                 },
                 vesselFlag: {
-                    title: 'Vessel Flag',
-                    width: '15%'
+                    title: 'Vessel Flag'
                 },
                 drillingHp: {
-                    title: 'Drilling HP',
-                    width: '15%'
+                    title: 'Drilling HP'
                 },
                 yearBuilt: {
-                    title: 'Year Built',
-                    width: '2%'
+                    title: 'Year Built'
                 },
                 companyBuilt: {
-                    title: 'Company Built',
-                    width: '2%'
+                    title: 'Company Built'
                 },
                 otherNames: {
-                    title: 'Other Names',
-                    width: '2%'
-                }
+                    title: 'Other Names'
+                }*/
             }
         });
 
